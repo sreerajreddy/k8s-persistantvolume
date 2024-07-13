@@ -1,4 +1,4 @@
--First we have create a pod with mongo image which is on port 27017. ans is port forwarded to 32000.
+-First we create a pod with mongo image which is exposed on port 27017. And is port forwarded to 32000.
 - We're using  mongodb compass(which is a mongo client GUI) to connect to the database.
 -Any chages made in the container doesn't apply to the container when the pods restarts for some reason, to overcome that issue we use volume at pod leve called emptyDir. So, wehenever a pod is restarted a new contaienr is created which results in shared volume of the previous container, whichever changes has been made to the container reflects and getes updated in the new container.
 (this is not the ultimate solution for this)
